@@ -1,60 +1,34 @@
 class Refrigerator {
 
-    static boolean isWorking;
-    static int currentTemperature = 5;
-    static int maxTemperature = 10;
-    static int minTemperature = 0;
-
-    static boolean onOrOff() {
-
-        if (isWorking == false) {
-            isWorking = true;
-            System.out.println("Refrigerator started cooling");
-        } else if (isWorking == true) {
-            isWorking = false;
-            System.out.println("Refrigerator stopped cooling");
-        }
-
-        return isWorking;
+    static String getBrand(){
+        return "Samsung";
     }
 
-    static int increaseTemperature() {
-
-        System.out.println("Increase Temperature is invoked");
-
-        if (isWorking == true) {
-
-            if (currentTemperature < maxTemperature) {
-                currentTemperature = currentTemperature + 1;
-                System.out.println("The current temperature is " + currentTemperature + " degree Celsius");
-            } else {
-                System.out.println("Maximum temperature limit is reached");
-            }
-
-        } else {
-            System.out.println("Refrigerator is not working please turn it On");
-        }
-
-        return currentTemperature;
+    static int getCapacity(){
+        return 253;
     }
 
-    static int decreaseTemperature() {
+    static String getEnergyRating(){
+        return "3 Star";
+    }
 
-        System.out.println("Decrease Temperature is invoked");
+    static String getCoolingType(){
+        return "Frost Free";
+    }
 
-        if (isWorking == true) {
+    static String getCompressorType(){
+        return "Digital Inverter";
+    }
 
-            if (currentTemperature > minTemperature) {
-                currentTemperature = currentTemperature - 1;
-                System.out.println("The current temperature is " + currentTemperature + " degree Celsius");
-            } else {
-                System.out.println("Minimum temperature limit is reached");
-            }
+    static String getColour(){
+        return "Silver";
+    }
 
-        } else {
-            System.out.println("Refrigerator is not working please turn it On");
-        }
+    static int getVoltage(){
+        return 230;
+    }
 
-        return currentTemperature;
+    static double getPrice(){
+        return 24999.00;
     }
 }
